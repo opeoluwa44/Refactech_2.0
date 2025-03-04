@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { Button } from '../ButtonElements'
+import Video from '../../videos/video.mp4'
 import { 
     HeroContainer, 
     HeroBg, 
@@ -6,9 +8,9 @@ import {
     HeroContent, 
     HeroH1, 
     HeroBtnWrapper, 
-    Button, 
     ArrowForward, 
-    ArrowRight 
+    ArrowRight, 
+    VideoBg
 } from './HeroElements'
 
 const HeroSection = () => {
@@ -21,13 +23,13 @@ const HeroSection = () => {
   return (
     <HeroContainer>
         <HeroBg>
-
+            <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
         </HeroBg>
         <HeroContent>
-            <HeroH1>Where innovation meets Tech</HeroH1>
-            <HeroP>Sign up for a new account today</HeroP>
+            <HeroH1>We Help Companies <br/> and Businesses <br/> Operate, Build and Deploy</HeroH1>
+            <HeroP>their Software, Product and Services</HeroP>
             <HeroBtnWrapper>
-                <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover}>
+                <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
                     Get started {hover ? <ArrowForward /> : <ArrowRight />}
                 </Button>
             </HeroBtnWrapper>
