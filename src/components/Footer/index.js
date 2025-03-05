@@ -65,7 +65,7 @@ const Footer = () => {
                 <FooterLogoWrap>
                     <FooterLogoBox>
                         <FooterLogo to='/' onClick={toggleHome}>RefacTech</FooterLogo>
-                        <WebsiteRights>RefacTech{new Date().getFullYear()} All rights reserved.</WebsiteRights>
+                        <WebsiteRights>RefacTech©{new Date().getFullYear()} All rights reserved.</WebsiteRights>
                     </FooterLogoBox>
                     <FooterLogoBox>
                         <Address>53, St. Finbarrs Road, Akoka, Lagos</Address>
