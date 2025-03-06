@@ -1,0 +1,142 @@
+/* Slider.css */
+
+/* Container for the entire slider */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative; /* Ensure buttons are positioned relative to this container */
+}
+
+/* Title styling */
+.title h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Container for the slides */
+.section-center {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    height: 400px;
+    overflow: hidden; /* Keep this to hide slides outside the container */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual slide styling */
+article {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Active slide */
+article.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide to the left */
+article.leftSlide {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* Slide to the right */
+article.nextSlide {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+/* Image styling */
+.person-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 4px solid #ccc;
+}
+
+/* Name styling */
+h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+/* Title styling */
+.title {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+/* Quote styling */
+.text {
+    font-size: 1rem;
+    color: #888;
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    z-index: 1; /* Ensure buttons are above the slides */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: #555;
+}
+
+/* Position the "Prev" button to the left */
+.prev {
+    left: 1rem;
+}
+
+/* Position the "Next" button to the right */
+.next {
+    right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .prev,
+    .next {
+        display: none; /* Hide buttons on mobile */
+    }
+
+    .section-center {
+        overflow-x: auto; /* Enable horizontal scrolling for mobile */
+        overflow: hidden;
+    }
+}
