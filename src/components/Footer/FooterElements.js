@@ -102,7 +102,8 @@ export const FooterLogo = styled(Link)`
 
 export const WebsiteRights = styled.small`
     color: #fff;
-    margin:0 auto;    
+    margin:0 auto;
+    text-align: center;    
 `
 
 export const Address = styled(WebsiteRights)`
