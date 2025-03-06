@@ -24,7 +24,7 @@
     position: relative;
     width: 80%;
     max-width: 800px;
-    height: 400px;
+    height: 500px;
     overflow: hidden; /* Keep this to hide slides outside the container */
     display: flex;
     align-items: center;
@@ -138,5 +138,6 @@ h4 {
     .section-center {
         overflow-x: auto; /* Enable horizontal scrolling for mobile */
         overflow: hidden;
+        height: 80vh;
     }
 }
